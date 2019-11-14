@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 
 @RestController
-public class InitDataController {
+public class PlayerController {
     @Resource
     private PlayerService playerService;
 
@@ -18,4 +19,16 @@ public class InitDataController {
         playerService.initData();
         return "success insert players data";
     }
+
+    @GetMapping("importAll")
+    public String importAll(){
+        try {
+            playerService.importAll();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "success";
+    }
+
+
 }

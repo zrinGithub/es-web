@@ -8,6 +8,10 @@ import java.util.Date;
 @Data
 public class Player {
     /**
+     * 自增ID
+     */
+    private Integer id;
+    /**
      * 中文名称
      */
     private String cnName;
