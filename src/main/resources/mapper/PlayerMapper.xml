@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zr.eswebcollector.dao.PlayerDao">
     <sql id="Base_Column_List">
-    ID, CN_NAME, EN_NAME, NATION, BIRTH, AGE, WEIGHT, HEIGHT, TEAM_NAME, POSITION, NUMBER
+    ID, CN_NAME as cnName, EN_NAME as enName, NATION as nation, BIRTH as birth, AGE as age, WEIGHT as weight, HEIGHT as height, TEAM_NAME as teamName
+    , POSITION as position, NUMBER as number
     </sql>
 
     <insert id="insert" parameterType="com.zr.eswebcollector.entity.Player">
